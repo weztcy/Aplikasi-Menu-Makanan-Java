@@ -13,8 +13,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView menu;
-    private ArrayList<com.example.aplikasimenumakanan.Kuliner> listKuliner;
-    private com.example.aplikasimenumakanan.kuliner_adapter.RecyclerViewClickListener listener;
+    private ArrayList<Kuliner> listKuliner;
+    private kuliner_adapter.RecyclerViewClickListener listener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         initData();
 
         setOnClickListener();
-        menu.setAdapter(new com.example.aplikasimenumakanan.kuliner_adapter(listKuliner, listener));
+        menu.setAdapter(new kuliner_adapter(listKuliner, listener));
         menu.setLayoutManager(new LinearLayoutManager(this));
     }
 
